@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="bs">
 <head>
-<meta charset="UTF-8">
-<title>To-Do Lista</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>To-Do Lista</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
- 
-<div class="container">
-<h1>📝 To-Do Lista</h1>
- 
-    <input type="text" id="taskInput" placeholder="Unesi novi zadatak">
-<button id="addTaskBtn">Dodaj</button>
- 
+
+  <div class="container">
+    <h1>📝 To-Do Lista</h1>
+
+    <div class="row">
+      <input id="taskInput" placeholder="uradi zadacu">
+      <button id="addTaskBtn">Dodaj</button>
+    </div>
+
     <ul id="taskList"></ul>
-</div>
- 
-<script type="module" src="app.js"></script>
+  </div>
+
+  <!-- BITNO: app.js mora postojati i zvati se TAČNO app.js -->
+  <script type="module" src="app.js"></script>
 </body>
 </html>

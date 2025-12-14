@@ -2,6 +2,7 @@
 <html lang="bs">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>To-Do Lista</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -10,15 +11,14 @@
   <div class="container">
     <h1>📝 To-Do Lista</h1>
 
-    <div class="row">
-      <input id="taskInput" placeholder="uradi zadacu">
-      <button id="addTaskBtn">Dodaj</button>
-    </div>
+    <input type="text" id="taskInput" placeholder="Unesi novi zadatak">
+
+    <button id="addTaskBtn">Dodaj</button>
 
     <ul id="taskList"></ul>
   </div>
 
-  <!-- BITNO: app.js mora postojati i zvati se TAČNO app.js -->
+  <!-- BITNO: fajl na GitHubu mora se zvati TAČNO app.js -->
   <script type="module" src="app.js"></script>
 </body>
 </html>

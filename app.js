@@ -9,7 +9,7 @@ import {
   updateDoc
 } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
 
-// ✅ Firebase config
+
 const firebaseConfig = {
   apiKey: "AIzaSyDxzQnSMWGzyIcv3pPCWXvm_tb1vlTu2y0",
   authDomain: "nela-si.firebaseapp.com",
@@ -22,15 +22,14 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// ✅ DOM
+
 const taskInput = document.getElementById("taskInput");
 const addTaskBtn = document.getElementById("addTaskBtn");
 const taskList = document.getElementById("taskList");
 
-// ✅ Ako se ovo NE pojavi u Console na GitHub Pages -> app.js se NE učitava (ime/putanja)
 console.log("✅ app.js učitan, Firebase init OK");
 
-// ✅ Dodavanje
+
 addTaskBtn.addEventListener("click", async () => {
   const text = taskInput.value.trim();
   if (!text) return;
@@ -45,7 +44,6 @@ addTaskBtn.addEventListener("click", async () => {
   }
 });
 
-// ✅ Real-time prikaz + error handler (OVO TI JE FALILO)
 onSnapshot(
   collection(db, "tasks"),
   (snapshot) => {
@@ -89,3 +87,4 @@ onSnapshot(
     alert(`onSnapshot: ${e.code} — ${e.message}`);
   }
 );
+
